@@ -17,7 +17,6 @@ students = pd.read_csv(DATA_PATH, dtype=str).fillna("")
 
 def unique_sorted(col):
     vals = students[col].dropna().unique()
-    # For class, use mapping; for others, just sort
     if col == "CLAS_CODE":
         return [""] + [f"{code} - {CLASS_MAP.get(code, code)}" for code in sorted(vals) if code in CLASS_MAP]
     else:
