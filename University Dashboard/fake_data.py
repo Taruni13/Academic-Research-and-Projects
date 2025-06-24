@@ -1,18 +1,31 @@
+# ------------------------------------------------------
+# Fake Data Generator for University Dashboard
+# Generates a CSV file with fake student data for testing.
+# ------------------------------------------------------
+
 import pandas as pd
 from faker import Faker
 import random
 
+# Create a Faker instance for generating fake data
 fake = Faker()
 
+# ------------------------------------------------------
 # Read column headers from data.csv (do not overwrite it)
+# ------------------------------------------------------
 df = pd.read_csv("data.csv", nrows=0)
 columns = df.columns.tolist()
 
 num_rows = 100  # Number of fake rows to generate
 
+# ------------------------------------------------------
+# Function: fake_value
+# Generates a fake value for a given column name.
+# ------------------------------------------------------
 def fake_value(col):
     col_lower = col.lower()
     if col_lower == "curr_1_1_majr_desc":
+        # Randomly select a major
         return random.choice([
             "Business Administration",
             "Finance",
@@ -26,6 +39,7 @@ def fake_value(col):
             "Human Resource Management"
         ])
     elif col_lower == "curr_2_degc_desc":
+        # Randomly select a second degree or leave blank
         return random.choice([
             "",
             "MBA",
@@ -65,13 +79,19 @@ def fake_value(col):
     elif "ovrl_hrs_earned" in col_lower:
         return random.randint(30, 120)
     else:
-        return fake.word()
+        return fake.word()  # Default: random word
 
+# ------------------------------------------------------
+# Generate fake data rows
+# ------------------------------------------------------
 data = []
 for _ in range(num_rows):
-    row = [fake_value(col) for col in columns]
+    row = [fake_value(col) for col in columns]  # Generate a row of fake data
     data.append(row)
 
+# ------------------------------------------------------
+# Create DataFrame and write to CSV
+# ------------------------------------------------------
 fake_df = pd.DataFrame(data, columns=columns)
 fake_df.to_csv("students_fake.csv", index=False)
 print("Fake data written to students_fake.csv")
