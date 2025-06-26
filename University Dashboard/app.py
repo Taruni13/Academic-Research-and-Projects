@@ -12,8 +12,7 @@ import faicons as fa
 from helpers import load_data, get_student_count, calculate_average_grade
 
 # --- Set your OpenAI API key (replace with your own key) ---
-openai.api_key = "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"
-
+openai.api_key = "API-KEY-HERE"  # Replace with your actual OpenAI API key
 # --- Mapping for class codes to full names ---
 CLASS_MAP = {
     "FR": "Freshman",
