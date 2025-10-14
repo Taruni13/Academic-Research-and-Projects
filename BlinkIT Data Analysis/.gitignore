@@ -1,0 +1,8 @@
+# Mac OS
+.DS_Store
+
+# Node / Dev
+node_modules/
+
+# Power BI / large files (keep pbix if tracked with LFS)
+*.pbix
