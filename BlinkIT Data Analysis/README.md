@@ -1,8 +1,8 @@
 # Blinkit — Power BI Sales Dashboard
 
 Preview
-- Screenshot: `https://drive.google.com/file/d/1Cph1JuwXNFt8VrxyKgPohwvlQ95FZY6P/view?usp=sharing`
-- Vedio Link: `https://drive.google.com/file/d/14PE6nzXPZdSxjPwZNL9IRuxuxofyP4q6/view?usp=sharing`
+- [Screenshot](https://drive.google.com/file/d/1Cph1JuwXNFt8VrxyKgPohwvlQ95FZY6P/view?usp=sharing)
+- [Vedio Link](https://drive.google.com/file/d/14PE6nzXPZdSxjPwZNL9IRuxuxofyP4q6/view?usp=sharing)
 
 Overview
 - Power BI dashboard built from Blinkit sales data showcasing key business metrics and item-level analytics.
